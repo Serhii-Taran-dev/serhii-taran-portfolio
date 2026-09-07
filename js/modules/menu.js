@@ -21,11 +21,13 @@ export function initMenu() {
   ].filter((element, index, elements) => elements.indexOf(element) === index);
 
   function openMenu() {
+    mobileMenu.inert = false;
+    mobileMenu.setAttribute("aria-hidden", "false");
+
     mobileMenu.classList.add("active");
     document.body.classList.add("no-scroll");
 
     burgerBtn.setAttribute("aria-expanded", "true");
-    mobileMenu.setAttribute("aria-hidden", "false");
 
     closeBtn.focus();
   }
@@ -35,11 +37,18 @@ export function initMenu() {
     document.body.classList.remove("no-scroll");
 
     burgerBtn.setAttribute("aria-expanded", "false");
-    mobileMenu.setAttribute("aria-hidden", "true");
 
     if (restoreFocus) {
       burgerBtn.focus();
+    } else if (
+      document.activeElement instanceof HTMLElement &&
+      mobileMenu.contains(document.activeElement)
+    ) {
+      document.activeElement.blur();
     }
+
+    mobileMenu.inert = true;
+    mobileMenu.setAttribute("aria-hidden", "true");
   }
 
   function handleMenuKeydown(event) {
@@ -85,5 +94,7 @@ export function initMenu() {
   });
 
   burgerBtn.setAttribute("aria-expanded", "false");
+
+  mobileMenu.inert = true;
   mobileMenu.setAttribute("aria-hidden", "true");
 }

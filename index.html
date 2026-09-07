@@ -24,14 +24,42 @@
   <body>
     <header class="header">
       <div class="header__container container">
-        <a href="/" class="header__logo">
-          Sergii<span class="section__title-accent">Taran.</span>
+        <a class="header__logo" href="./" aria-label="Serhii Taran — Home">
+          Serhii <span class="header__logo-accent">Taran</span>
         </a>
 
-        <div class="header-wrapper">
+        <div class="header__actions">
+          <nav class="header__nav" aria-label="Primary navigation">
+            <ul class="header__list">
+              <li>
+                <a class="header__link" href="#about">About me</a>
+              </li>
+              <li>
+                <a class="header__link" href="#projects">Projects</a>
+              </li>
+              <li>
+                <a class="header__link" href="#contacts">Contact</a>
+              </li>
+            </ul>
+          </nav>
+
           <label class="theme-switch">
-            <input type="checkbox" id="theme-toggle" />
-            <span class="slider"></span>
+            <input
+              class="theme-switch__input"
+              id="theme-toggle"
+              type="checkbox"
+              role="switch"
+              aria-label="Switch to dark theme"
+            />
+
+            <span class="theme-switch__track" aria-hidden="true">
+              <span class="theme-switch__star theme-switch__star--first"></span>
+              <span
+                class="theme-switch__star theme-switch__star--second"
+              ></span>
+              <span class="theme-switch__star theme-switch__star--third"></span>
+              <span class="theme-switch__orb"></span>
+            </span>
           </label>
 
           <button
@@ -42,24 +70,15 @@
             aria-controls="mobile-menu"
             aria-expanded="false"
           >
-            <svg class="header__burger-icon" width="24" height="22">
-              <use href="/images/icons.svg#icon-burger-btn"></use>
+            <svg
+              class="header__burger-icon"
+              width="24"
+              height="22"
+              aria-hidden="true"
+            >
+              <use href="./images/icons.svg#icon-burger-btn"></use>
             </svg>
           </button>
-
-          <nav class="header__nav" aria-label="Primary menu" role="navigation">
-            <ul class="header__list">
-              <li class="header__item">
-                <a class="header__link" href="#about">About me</a>
-              </li>
-              <li class="header__item">
-                <a class="header__link" href="#projects">Projects</a>
-              </li>
-              <li class="header__item">
-                <a class="header__link" href="#contacts">Contacts</a>
-              </li>
-            </ul>
-          </nav>
         </div>
       </div>
     </header>
@@ -68,18 +87,19 @@
     <nav
       class="mobile-menu"
       id="mobile-menu"
-      aria-label="Mobile menu"
+      aria-label="Mobile navigation"
       aria-hidden="true"
+      inert
     >
       <div class="mobile-menu__top">
-        <a href="/" class="mobile-menu__logo">
-          Sergii<span class="section__title-accent">Taran.</span>
+        <a class="mobile-menu__logo" href="./" aria-label="Serhii Taran — Home">
+          Serhii <span class="mobile-menu__logo-accent">Taran</span>
         </a>
 
         <button
-          type="button"
           class="mobile-menu__close"
           id="menu-close-btn"
+          type="button"
           aria-label="Close menu"
         >
           <svg
@@ -88,22 +108,27 @@
             height="32"
             aria-hidden="true"
           >
-            <use href="/images/icons.svg#icon-close-btn"></use>
+            <use href="./images/icons.svg#icon-close-btn"></use>
           </svg>
         </button>
       </div>
 
       <ul class="mobile-menu__list">
-        <li class="mobile-menu__item">
-          <a href="#about" class="mobile-menu__link">About me</a>
+        <li>
+          <a class="mobile-menu__link" href="#about">About me</a>
         </li>
-        <li class="mobile-menu__item">
-          <a href="#projects" class="mobile-menu__link">Projects</a>
+        <li>
+          <a class="mobile-menu__link" href="#projects">Projects</a>
         </li>
-        <li class="mobile-menu__item">
-          <a href="#contacts" class="mobile-menu__link">Contacts</a>
+        <li>
+          <a class="mobile-menu__link" href="#contacts">Contact</a>
         </li>
       </ul>
+
+      <p class="mobile-menu__caption">
+        <span>Full-Stack Developer</span>
+        <span>Web Solutions · AI</span>
+      </p>
     </nav>
 
     <main>
