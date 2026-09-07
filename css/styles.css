@@ -1,91 +1,105 @@
-@font-face {
-  font-family: "Impact";
-  src: url("../fonts/impact.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
+/* ==============================
+   Design tokens
+================================= */
 
-@font-face {
-  font-display: swap;
-  font-family: "Poppins";
-  font-style: normal;
-  font-weight: 300;
-  src: url("../fonts/poppins-v24-latin-300.woff2") format("woff2");
-}
-
-@font-face {
-  font-display: swap;
-  font-family: "Poppins";
-  font-style: normal;
-  font-weight: 400;
-  src: url("../fonts/poppins-v24-latin-regular.woff2") format("woff2");
-}
-
-@font-face {
-  font-display: swap;
-  font-family: "Poppins";
-  font-style: normal;
-  font-weight: 500;
-  src: url("../fonts/poppins-v24-latin-500.woff2") format("woff2");
-}
-
-@font-face {
-  font-display: swap;
-  font-family: "Poppins";
-  font-style: normal;
-  font-weight: 600;
-  src: url("../fonts/poppins-v24-latin-600.woff2") format("woff2");
-}
-
-/* ====== base theme (light by default) ====== */
 :root {
-  /* ------- fonts ------- */
-  --font-main: "Poppins", sans-serif;
-  --font-accent: "Impact", sans-serif;
+  /* Typography */
+  --font-main:
+    "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
 
-  /* ======= light theme colors ======= */
-  --color-text: #292929;
-  --color-accent: #00b068;
-  --color-bg: #f0f0f0;
-  --color-send-text: #f0f0f0;
-  --color-elements-bg: #e4e5e6;
-  --color-footer-border: #e4e5e6;
-  --color-bg-accent: #bcdfd1;
-  --color-send-hover: #009156;
-  --color-hover-gray: #bbbbbb;
-  --color-error: #e74a3b;
+  /* Brand colors */
+  --color-navy: #0b1f33;
+  --color-blue: #2d6df6;
+  --color-white: #ffffff;
+  --color-slate: #5b6b7a;
+  --color-pearl: #fafbfc;
+  --color-silver: #d8e1ea;
+
+  /* Semantic colors */
+  --color-text: var(--color-navy);
+  --color-text-muted: var(--color-slate);
+  --color-accent: var(--color-blue);
+  --color-bg: var(--color-pearl);
+  --color-surface: var(--color-white);
+  --color-elements-bg: #eef3f8;
+  --color-footer-border: var(--color-silver);
+  --color-bg-accent: #e8f0ff;
+  --color-send-text: var(--color-white);
+  --color-send-hover: #1f5ad7;
+  --color-hover-gray: #c6d2de;
+  --color-error: #c43d3d;
+
+  /* Layout */
+  --container-max-width: 1280px;
+  --container-padding-mobile: 20px;
+  --container-padding-tablet: 32px;
+
+  /* Shape */
+  --radius-small: 8px;
+  --radius-medium: 16px;
+  --radius-large: 24px;
+  --radius-pill: 999px;
+
+  /* Motion */
+  --transition-fast: 200ms ease;
+  --transition-base: 300ms ease;
 }
 
-/* ======= dark theme override ======= */
+body.dark-theme {
+  --color-text: var(--color-pearl);
+  --color-text-muted: #aab7c4;
+  --color-bg: #071625;
+  --color-surface: var(--color-navy);
+  --color-elements-bg: #122a41;
+  --color-footer-border: #29435b;
+  --color-bg-accent: #132f54;
+  --color-hover-gray: #1a3854;
+}
 
-.dark-theme {
-  --color-text: #f0f0f0;
-  --color-accent: #14c57c;
-  --color-bg: #1e2023;
-  --color-elements-bg: #2a2d32;
-  --color-footer-border: #f0f0f0;
-  --color-bg-accent: #204136;
-  --color-hover-gray: #3b3f45;
+/* ==============================
+   Base styles
+================================= */
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
+  overflow-x: hidden;
   font-family: var(--font-main);
+  font-size: 16px;
+  line-height: 1.5;
   color: var(--color-text);
   background-color: var(--color-bg);
-  line-height: 1.5;
-  margin: 0;
-  overflow-x: hidden;
+  transition:
+    color var(--transition-base),
+    background-color var(--transition-base);
 }
 
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
+button,
+a,
+input,
+textarea {
+  -webkit-tap-highlight-color: transparent;
 }
 
-button {
-  cursor: pointer;
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+::selection {
+  color: var(--color-white);
+  background-color: var(--color-accent);
+}
+
+.no-scroll {
+  overflow: hidden;
 }
 
 .visually-hidden {
@@ -93,33 +107,31 @@ button {
   width: 1px;
   height: 1px;
   margin: -1px;
-  border: 0;
   padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
   overflow: hidden;
+  white-space: nowrap;
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(100%);
 }
 
-/* ----------------------------- */
-/* ------- common styles ------- */
+/* ==============================
+   Common layout
+================================= */
 
 .container {
   width: 100%;
-  max-width: 360px;
-  padding-left: 20px;
-  padding-right: 20px;
-  margin-left: auto;
-  margin-right: auto;
+  max-width: var(--container-max-width);
+  margin-inline: auto;
+  padding-inline: var(--container-padding-mobile);
 }
 
 .section__title {
-  font-family: "Impact", sans-serif;
-
-  font-weight: 400;
-  font-size: 48px;
-  line-height: 1.23;
-  letter-spacing: 0.03em;
+  font-family: var(--font-main);
+  font-size: clamp(40px, 8vw, 88px);
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.04em;
   text-transform: uppercase;
 }
 
@@ -128,29 +140,31 @@ button {
 }
 
 .section__text {
-  font-weight: 300;
   font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.03em;
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: 0;
+  color: var(--color-text-muted);
 }
 
 @media screen and (min-width: 768px) {
   .container {
-    max-width: 768px;
-    padding-left: 32px;
-    padding-right: 32px;
-  }
-
-  .section__title {
-    font-size: 108px;
-    line-height: 1.15;
-    letter-spacing: 0.02em;
+    padding-inline: var(--container-padding-tablet);
   }
 }
 
-@media screen and (min-width: 1280px) {
-  .container {
-    max-width: 1280px;
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }
 
@@ -169,7 +183,7 @@ button {
 }
 
 .header__logo {
-  font-family: "Impact", sans-serif;
+  font-family: var(--font-main);
 
   font-size: 24px;
   line-height: 1;
@@ -409,7 +423,7 @@ body,
 
 .mobile-menu__logo {
   display: inline-block;
-  font-family: "Impact", sans-serif;
+  font-family: var(--font-main);
   font-size: 24px;
   line-height: 1;
   letter-spacing: 0.06em;
@@ -535,8 +549,7 @@ body,
 }
 
 .hero__title {
-  font-family: "Impact", sans-serif;
-
+  font-family: var(--font-main);
   font-weight: 400;
   font-size: 64px;
   line-height: 1.25;
