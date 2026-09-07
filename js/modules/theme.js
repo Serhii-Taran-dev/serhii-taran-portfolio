@@ -1,32 +1,41 @@
-// export function initTheme() {
-//   const themeToggle = document.getElementById("theme-toggle");
-//   if (!themeToggle) return;
+const THEME_STORAGE_KEY = "portfolio-theme";
 
-//   const savedTheme = localStorage.getItem("theme") || "light";
+function getInitialTheme() {
+  const savedTheme = localStorage.getItem(THEME_STORAGE_KEY);
 
-//   document.body.classList.toggle("dark-theme", savedTheme === "dark");
-//   themeToggle.checked = savedTheme === "dark";
+  if (savedTheme === "light" || savedTheme === "dark") {
+    return savedTheme;
+  }
 
-//   themeToggle.addEventListener("change", () => {
-//     const isDark = themeToggle.checked;
-//     document.body.classList.toggle("dark-theme", isDark);
-//     localStorage.setItem("theme", isDark ? "dark" : "light");
-//   });
-// }
+  return window.matchMedia("(prefers-color-scheme: dark)").matches
+    ? "dark"
+    : "light";
+}
+
+function applyTheme(theme, themeToggle) {
+  const isDark = theme === "dark";
+
+  document.body.classList.toggle("dark-theme", isDark);
+  document.documentElement.style.colorScheme = theme;
+
+  themeToggle.checked = isDark;
+  themeToggle.setAttribute(
+    "aria-label",
+    isDark ? "Switch to light theme" : "Switch to dark theme",
+  );
+}
 
 export function initTheme() {
   const themeToggle = document.getElementById("theme-toggle");
-  if (!themeToggle) return;
 
-  // Встановлюємо початкову тему
-  const savedTheme = localStorage.getItem("theme") || "light";
-  document.body.classList.toggle("dark-theme", savedTheme === "dark");
-  themeToggle.checked = savedTheme === "dark";
+  if (!(themeToggle instanceof HTMLInputElement)) return;
 
-  // Обробник зміни теми
+  applyTheme(getInitialTheme(), themeToggle);
+
   themeToggle.addEventListener("change", () => {
-    const isDark = themeToggle.checked;
-    document.body.classList.toggle("dark-theme", isDark);
-    localStorage.setItem("theme", isDark ? "dark" : "light");
+    const theme = themeToggle.checked ? "dark" : "light";
+
+    applyTheme(theme, themeToggle);
+    localStorage.setItem(THEME_STORAGE_KEY, theme);
   });
 }
