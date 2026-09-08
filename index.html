@@ -132,88 +132,103 @@
     </nav>
 
     <main>
-      <section class="hero section">
+      <section class="hero section" aria-labelledby="hero-title">
         <div class="hero__container container">
-          <div class="hero__top-wrapper">
-            <h1 class="hero__title">
-              Hello, I am
-              <span class="hero__title-accent">Fullstack developer</span>
+          <div class="hero__content">
+            <p class="hero__eyebrow">
+              <span class="hero__status-dot" aria-hidden="true"></span>
+              Full-Stack Developer
+            </p>
+
+            <h1 class="hero__title" id="hero-title">
+              I build modern web
+              <span class="hero__title-accent">solutions with AI.</span>
             </h1>
 
-            <div class="hero__img-wrapper">
-              <img
-                class="hero__img"
-                src="/images/hero/hero-img.jpg"
-                srcset="
-                  /images/hero/hero-img.jpg    1x,
-                  /images/hero/hero-img@2x.jpg 2x
-                "
-                alt="Person smiling at the camera"
-                width="592"
-              />
+            <p class="hero__description">
+              I create responsive, accessible and scalable web applications that
+              turn ideas into practical digital products.
+            </p>
+
+            <div class="hero__controls">
+              <div class="hero__actions">
+                <a class="hero__button hero__button--primary" href="#projects">
+                  View my work
+                </a>
+
+                <a
+                  class="hero__button hero__button--secondary"
+                  href="#contacts"
+                >
+                  Let’s work together
+                </a>
+              </div>
+
+              <ul class="hero__socials" aria-label="Professional profiles">
+                <li>
+                  <a
+                    class="hero__social-link"
+                    href="https://github.com/Serhii-Taran-dev"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Visit Serhii Taran on GitHub"
+                  >
+                    GitHub
+                    <span aria-hidden="true">↗</span>
+                  </a>
+                </li>
+
+                <!-- LinkedIn will be added after the profile is created -->
+              </ul>
             </div>
           </div>
 
-          <div class="hero__bottom-wrapper">
-            <a class="hero__link" href="#contacts"
-              ><span class="hero__link-content">
-                <svg class="hero__arrow" width="28" height="15">
-                  <use href="/images/icons.svg#icon-arrow-hero"></use>
-                </svg>
-                Order the project</span
-              ></a
-            >
+          <div class="hero__visual" aria-hidden="true">
+            <div class="hero__visual-glow"></div>
 
-            <p class="hero__text">
-              I work with people all over the world to create
-              <span class="hero__text-accent">impressive</span> and
-              <span class="hero__text-accent">functional websites</span> that
-              reflect each client’s unique personality.
-            </p>
+            <div class="hero__code-card">
+              <div class="hero__code-header">
+                <span></span>
+                <span></span>
+                <span></span>
+
+                <p>developer.js</p>
+              </div>
+
+              <div class="hero__code-content">
+                <p>
+                  <span class="hero__code-keyword">const</span>
+                  <span class="hero__code-variable">developer</span> = {
+                </p>
+
+                <p class="hero__code-line">
+                  name:
+                  <span class="hero__code-value">'Serhii Taran'</span>,
+                </p>
+
+                <p class="hero__code-line">
+                  role:
+                  <span class="hero__code-value">'Full-Stack Developer'</span>,
+                </p>
+
+                <p class="hero__code-line">
+                  focus: [
+                  <span class="hero__code-value">'Web'</span>,
+                  <span class="hero__code-value">'AI'</span>
+                  ],
+                </p>
+
+                <p>};</p>
+              </div>
+
+              <ul class="hero__tech-list">
+                <li>React</li>
+                <li>TypeScript</li>
+                <li>Next.js</li>
+                <li>Node.js</li>
+              </ul>
+            </div>
           </div>
-
-          <ul class="hero__socials" aria-label="Social networks">
-            <li class="hero__socials-item">
-              <a
-                class="hero__socials-link"
-                href="https://www.instagram.com/goitclub/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Instagram"
-                >Instagram</a
-              >
-            </li>
-            <li class="hero__socials-item">
-              <a
-                class="hero__socials-link"
-                href="https://www.facebook.com/goITclub/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Facebook"
-                >Facebook</a
-              >
-            </li>
-            <li class="hero__socials-item">
-              <a
-                class="hero__socials-link"
-                href="https://ua.linkedin.com/school/goit-start-your-career/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Linkedin"
-                >Linkedin</a
-              >
-            </li>
-            <li class="hero__socials-item">
-              <a
-                class="hero__socials-link"
-                href="https://sergii-taran.github.io/my-portfolio-template/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="GitHub"
-                >GitHub</a
-              >
-            </li>
-          </ul>
         </div>
       </section>
 
