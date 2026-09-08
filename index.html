@@ -232,87 +232,95 @@
         </div>
       </section>
 
-      <section id="about" class="about">
+      <section class="about section" id="about" aria-labelledby="about-title">
         <div class="about__container container">
-          <h2 class="about__title section__title">
-            About <span class="section__title-accent">me</span>
-          </h2>
+          <div class="about__heading">
+            <p class="about__eyebrow">Beyond the code</p>
 
-          <div class="about__subcontainer">
-            <div class="about__img-container">
-              <picture class="about__picture">
-                <source
-                  srcset="
-                    ./images/about/about-img.jpg,
-                    ./images/about/about-img@2x.jpg 2x
-                  "
-                  media="(min-width: 1280px)" />
-                <source
-                  srcset="
-                    ./images/about/about-img-tab.jpg,
-                    ./images/about/about-img-tab@2x.jpg 2x
-                  "
-                  media="(min-width: 768px)" />
+            <h2 class="about__title section__title" id="about-title">
+              About <span class="section__title-accent">me</span>
+            </h2>
+          </div>
 
-                <img
-                  src="./images/about/about-img-mob.jpg"
-                  srcset="./images/about/about-img-mob@2x.jpg 2x"
-                  alt="My portrait"
-                  loading="lazy"
-              /></picture>
+          <div class="about__layout">
+            <div class="about__visual" aria-hidden="true">
+              <div class="about__portrait-card">
+                <span class="about__initials">ST</span>
+
+                <p class="about__visual-text">
+                  Structured thinking.
+                  <span>Practical solutions.</span>
+                </p>
+
+                <span class="about__visual-label">Serhii Taran</span>
+              </div>
             </div>
 
-            <div class="about__bio">
-              <h3 class="about__subtitle">BIO</h3>
-
-              <p class="about__text section__text">
-                I'm Sergii Taran, a talented programmer specializing in software
-                development. My expertise spans various programming languages
-                and technologies, and I am dedicated to continually enhancing my
-                skills. I thrive on seeking unconventional and creative
-                solutions to problems, leveraging a high level of analytical
-                skills to effectively tackle even the most challenging tasks.
+            <div class="about__content">
+              <p class="about__lead">
+                I combine modern web development with business thinking and
+                practical problem-solving.
               </p>
-              <p class="about__text section__text">
-                Adaptable to both independent and team-oriented work, I
-                collaborate seamlessly with colleagues, exchanging ideas and
-                finding optimal solutions. My professional maturity enables me
-                to navigate challenges and stressful situations with a calm
-                demeanor, maintaining a consistently high quality of work.
-                Committed to self-improvement, I actively engage in studying new
-                technologies and practices to stay current with the latest
-                innovations in the field.
-              </p>
-            </div>
 
-            <div class="about__education">
-              <h3 class="about__subtitle">EDUCATION</h3>
-              <ul class="about__education-list">
-                <li class="about__education-item section__text">
-                  2018 - 2019 / Frontend Development Diploma, GoIT IT School,
-                  New York
-                </li>
-                <li class="about__education-item section__text">
-                  2019 - 2020 / Advanced Web Development Certificate, GoIT IT
-                  School, New York
-                </li>
-                <li class="about__education-item section__text">
-                  2020 - 2022 / Advanced Blender Animation Techniques, Udemy
-                </li>
-              </ul>
-            </div>
+              <div class="about__bio">
+                <p>
+                  I’m Serhii Taran, a Full-Stack Developer with a background in
+                  project management, retail operations and analytics. This
+                  experience taught me to understand business needs, organize
+                  complex work and stay focused on practical results.
+                </p>
 
-            <div class="about__role">
-              <h3 class="about__subtitle">ROLE</h3>
-              <ul class="about__role-list">
-                <li class="about__role-item section__text">
-                  Frontend development
-                </li>
-                <li class="about__role-item section__text">
-                  HeadlessCMS, Wordpress
-                </li>
-                <li class="about__role-item section__text">Blender (enjoy)</li>
-              </ul>
+                <p>
+                  Since 2024, I have been building modern web applications with
+                  JavaScript, TypeScript, React, Next.js and Node.js. I focus on
+                  clear interfaces, reliable functionality, responsive design
+                  and maintainable code.
+                </p>
+
+                <p>
+                  I’m particularly interested in AI and process automation where
+                  they can simplify workflows, improve products and create
+                  measurable value.
+                </p>
+              </div>
+
+              <div class="about__details">
+                <article class="about__detail">
+                  <p class="about__detail-label">Education</p>
+
+                  <h3 class="about__detail-title">
+                    Fullstack Developer Program
+                  </h3>
+
+                  <p class="about__detail-text">
+                    GoIT IT School · Frontend and backend web development
+                  </p>
+                </article>
+
+                <article class="about__detail">
+                  <p class="about__detail-label">Professional background</p>
+
+                  <h3 class="about__detail-title">
+                    Project Management &amp; Analytics
+                  </h3>
+
+                  <p class="about__detail-text">
+                    Business processes · Team coordination · Data-driven
+                    decisions
+                  </p>
+                </article>
+              </div>
+
+              <div class="about__focus">
+                <p class="about__focus-label">Current focus</p>
+
+                <ul class="about__focus-list">
+                  <li>Frontend development</li>
+                  <li>Full-stack web applications</li>
+                  <li>AI-assisted workflows</li>
+                  <li>Process automation</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
