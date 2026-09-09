@@ -1,32 +1,50 @@
 [
   {
-    "text": "Work with was extraordinary! He turned out to be a very competent and responsible specialist. The projects were completed on time and the result exceeded my expectations.",
-    "name": "Natalia Shevchenko",
-    "avatar": "/images/reviews/reviews_img1.jpg"
+    "id": "test-review-1",
+    "text": "Serhii brings structure to complex tasks, communicates clearly and consistently follows work through to completion.",
+    "name": "Test Reviewer One",
+    "role": "Project Manager",
+    "company": "Test Company",
+    "context": "Test data · Professional collaboration"
   },
   {
-    "text": "I have the honor to recommend him as an exceptional professional in his field. His knowledge and expertise are undeniable. Cooperation with him always brings impressive results.",
-    "name": "Dmytro Nazarenko",
-    "avatar": "/images/reviews/reviews_img2.jpg"
+    "id": "test-review-2",
+    "text": "He approaches problems analytically, pays close attention to important details and keeps everyone informed throughout the process.",
+    "name": "Test Reviewer Two",
+    "role": "Business Analyst",
+    "company": "Test Company",
+    "context": "Test data · Team collaboration"
   },
   {
-    "text": "The collaboration was efficient and inspiring. He immediately understood the task and offered thoughtful solutions that significantly improved the final product.",
-    "name": "Anna Koval",
-    "avatar": "/images/reviews/reviews_img3.jpg"
+    "id": "test-review-3",
+    "text": "Working with Serhii is organized and productive. He listens carefully, clarifies expectations and takes responsibility for the final result.",
+    "name": "Test Reviewer Three",
+    "role": "Team Lead",
+    "company": "Test Company",
+    "context": "Test data · Project coordination"
   },
   {
-    "text": "A reliable developer who always stays in touch and delivers high-quality work. I was impressed with the attention to detail and proactive communication.",
-    "name": "Serhii Demchenko",
-    "avatar": "/images/reviews/reviews_img4.jpg"
+    "id": "test-review-4",
+    "text": "Working with Serhii is organized and productive. He listens carefully, clarifies expectations and takes responsibility for the final result.",
+    "name": "Test Reviewer Three",
+    "role": "Team Lead",
+    "company": "Test Company",
+    "context": "Test data · Project coordination"
   },
   {
-    "text": "Very responsible and talented. The project required a lot of precision and he handled everything perfectly. I will definitely work with him again.",
-    "name": "Oksana Rudenko",
-    "avatar": "/images/reviews/reviews_img5.jpg"
+    "id": "test-review-3",
+    "text": "Working with Serhii is organized and productive. He listens carefully, clarifies expectations and takes responsibility for the final result.",
+    "name": "Test Reviewer Three",
+    "role": "Team Lead",
+    "company": "Test Company",
+    "context": "Test data · Project coordination"
   },
   {
-    "text": "Great experience! He quickly understood our business needs and transformed them into a fully functional solution. Highly recommended for complex tasks.",
-    "name": "Taras Holub",
-    "avatar": "/images/reviews/reviews_img6.jpg"
+    "id": "test-review-4",
+    "text": "Working with Serhii is organized and productive. He listens carefully, clarifies expectations and takes responsibility for the final result.",
+    "name": "Test Reviewer Three",
+    "role": "Team Lead",
+    "company": "Test Company",
+    "context": "Test data · Project coordination"
   }
 ]

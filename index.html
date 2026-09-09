@@ -957,35 +957,68 @@
         </div>
       </section>
 
-      <section class="reviews section" id="reviews">
+      <section
+        class="reviews section"
+        id="reviews"
+        aria-labelledby="reviews-title"
+        hidden
+      >
         <div class="reviews__container container">
-          <h2 class="reviews__title section__title">Reviews</h2>
+          <div class="reviews__heading">
+            <p class="reviews__eyebrow">Professional feedback</p>
 
-          <div class="reviews__wrapper swiper">
-            <ul class="reviews__list swiper-wrapper"></ul>
+            <h2 class="reviews__title section__title" id="reviews-title">
+              What people say about
+              <span class="section__title-accent">working with me</span>
+            </h2>
 
-            <div class="reviews__controls">
-              <button
-                class="reviews__btn reviews__btn--prev"
-                aria-label="Previous review"
-              >
-                <svg class="reviews__btn-icon" width="24" height="24">
-                  <use href="/images/icons.svg#icon-arrow-left"></use>
-                </svg>
-              </button>
-
-              <button
-                class="reviews__btn reviews__btn--next"
-                aria-label="Next review"
-              >
-                <svg class="reviews__btn-icon" width="24" height="24">
-                  <use href="/images/icons.svg#icon-arrow-right"></use>
-                </svg>
-              </button>
-            </div>
+            <p class="reviews__intro">
+              Feedback from people who have worked with me across professional
+              and project environments.
+            </p>
           </div>
 
-          <p class="reviews__placeholder visually-hidden">Not found</p>
+          <div class="reviews__slider swiper">
+            <ul
+              class="reviews__list swiper-wrapper"
+              id="reviews-list"
+              aria-label="Professional recommendations"
+            ></ul>
+          </div>
+
+          <div class="reviews__controls" hidden>
+            <button
+              class="reviews__button reviews__button--previous"
+              type="button"
+              aria-label="Show previous recommendation"
+              aria-controls="reviews-list"
+            >
+              <svg
+                class="reviews__button-icon"
+                width="24"
+                height="24"
+                aria-hidden="true"
+              >
+                <use href="./images/icons.svg#icon-arrow-left"></use>
+              </svg>
+            </button>
+
+            <button
+              class="reviews__button reviews__button--next"
+              type="button"
+              aria-label="Show next recommendation"
+              aria-controls="reviews-list"
+            >
+              <svg
+                class="reviews__button-icon"
+                width="24"
+                height="24"
+                aria-hidden="true"
+              >
+                <use href="./images/icons.svg#icon-arrow-right"></use>
+              </svg>
+            </button>
+          </div>
         </div>
       </section>
 

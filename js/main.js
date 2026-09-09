@@ -1,10 +1,9 @@
 import { initTheme } from "./modules/theme.js";
 import { initMenu } from "./modules/menu.js";
 import { initProjects } from "./modules/projects.js";
-
-import "./modules/reviews.js";
-import "swiper/css";
+import { initReviews } from "./modules/reviews.js";
 
 initTheme();
 initMenu();
 initProjects();
+initReviews();
