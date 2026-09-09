@@ -1,24 +1,45 @@
+const PROJECTS_PER_LOAD = 3;
+
 export function initProjects() {
-  const hiddenCards = document.querySelectorAll(".projects__item--hidden");
-  const loadMoreBtn = document.querySelector(".projects__load-more-btn");
+  const projectsSection = document.querySelector(".projects");
 
-  if (!loadMoreBtn || hiddenCards.length === 0) return;
+  if (!(projectsSection instanceof HTMLElement)) return;
 
-  let index = 0;
-  const batch = 3;
+  const loadMoreBtn = projectsSection.querySelector(".projects__load-more-btn");
 
-  loadMoreBtn.addEventListener("click", () => {
-    const slice = Array.from(hiddenCards).slice(index, index + batch);
+  if (!(loadMoreBtn instanceof HTMLButtonElement)) return;
 
-    slice.forEach((card) => {
+  const hiddenCards = Array.from(
+    projectsSection.querySelectorAll(".projects__item--hidden"),
+  );
+
+  if (hiddenCards.length === 0) {
+    loadMoreBtn.hidden = true;
+    return;
+  }
+
+  loadMoreBtn.hidden = false;
+
+  loadMoreBtn.addEventListener("click", (event) => {
+    const cardsToShow = hiddenCards.splice(0, PROJECTS_PER_LOAD);
+
+    cardsToShow.forEach((card) => {
       card.classList.remove("projects__item--hidden");
       card.classList.add("projects__item--visible");
     });
 
-    index += batch;
+    if (event.detail === 0) {
+      const firstRevealedLink = cardsToShow[0]?.querySelector(
+        ".project-card__media",
+      );
 
-    if (index >= hiddenCards.length) {
-      loadMoreBtn.style.display = "none";
+      if (firstRevealedLink instanceof HTMLAnchorElement) {
+        firstRevealedLink.focus();
+      }
+    }
+
+    if (hiddenCards.length === 0) {
+      loadMoreBtn.hidden = true;
     }
   });
 }

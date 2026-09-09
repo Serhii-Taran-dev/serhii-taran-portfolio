@@ -420,446 +420,301 @@
         </div>
       </section>
 
-      <section id="projects" class="projects section">
+      <section
+        class="projects section"
+        id="projects"
+        aria-labelledby="projects-title"
+      >
         <div class="projects__container container">
-          <h2 class="projects__title section__title">
-            my <span class="section__title-accent">projects</span>
-          </h2>
+          <div class="projects__heading">
+            <p class="projects__eyebrow">Selected work</p>
 
-          <ul class="projects__list">
+            <h2 class="projects__title section__title" id="projects-title">
+              My <span class="section__title-accent">projects</span>
+            </h2>
+
+            <p class="projects__intro">
+              A selection of web applications and interfaces focused on
+              usability, responsive design and maintainable development.
+            </p>
+          </div>
+
+          <ul class="projects__list" id="projects-list">
+            <li class="projects__item projects__item--featured">
+              <article class="project-card project-card--featured">
+                <a
+                  class="project-card__media"
+                  href="https://notehub-app-plum.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Open the NoteHub live demo"
+                >
+                  <img
+                    class="project-card__image"
+                    src="./images/projects/notehub-project.webp"
+                    width="1440"
+                    height="900"
+                    alt="NoteHub notes management application interface"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </a>
+
+                <div class="project-card__content">
+                  <div class="project-card__meta">
+                    <p class="project-card__number">01</p>
+                    <p class="project-card__type">Full-stack application</p>
+                  </div>
+
+                  <h3 class="project-card__title">NoteHub</h3>
+
+                  <p class="project-card__description">
+                    A responsive note management application with
+                    authentication, filtering, search, protected routes and
+                    light and dark themes.
+                  </p>
+
+                  <ul
+                    class="project-card__tech-list"
+                    aria-label="Technologies used"
+                  >
+                    <li>Next.js</li>
+                    <li>TypeScript</li>
+                    <li>React Query</li>
+                    <li>Zustand</li>
+                    <li>REST API</li>
+                  </ul>
+
+                  <div class="project-card__actions">
+                    <a
+                      class="project-card__button project-card__button--primary"
+                      href="https://notehub-app-plum.vercel.app/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Live demo
+                      <span aria-hidden="true">↗</span>
+                    </a>
+
+                    <a
+                      class="project-card__button project-card__button--secondary"
+                      href="https://github.com/Serhii-Taran-dev/notehub-app"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Repository
+                      <span aria-hidden="true">↗</span>
+                    </a>
+                  </div>
+                </div>
+              </article>
+            </li>
+
             <li class="projects__item">
               <article class="project-card">
-                <img
-                  src="./images/projects/energy-img.jpg"
-                  srcset="
-                    ./images/projects/energy-img.jpg    1x,
-                    ./images/projects/energy-img@2x.jpg 2x
-                  "
-                  width="828"
-                  height="480"
-                  alt="Energy flow"
-                  class="project-card__img"
-                  loading="lazy"
-                />
+                <a
+                  class="project-card__media"
+                  href="https://04-react-query-mu-ashy.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Open the Movie Search live demo"
+                >
+                  <img
+                    class="project-card__image"
+                    src="./images/projects/movie-search-project.webp"
+                    width="1440"
+                    height="900"
+                    alt="Movie Search application showing movie search results"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </a>
 
                 <div class="project-card__content">
-                  <p class="project-card__stack">
-                    React, JavaScript, Node JS, Git
+                  <div class="project-card__meta">
+                    <p class="project-card__number">02</p>
+                    <p class="project-card__type">React application</p>
+                  </div>
+
+                  <h3 class="project-card__title">Movie Search</h3>
+
+                  <p class="project-card__description">
+                    A responsive movie discovery application with search,
+                    pagination and detailed movie information powered by the
+                    TMDB API.
                   </p>
 
-                  <div class="project-card__title-btn-wrapper">
-                    <h3 class="project-card__title">energy flow webservice</h3>
+                  <ul
+                    class="project-card__tech-list"
+                    aria-label="Technologies used"
+                  >
+                    <li>React</li>
+                    <li>TypeScript</li>
+                    <li>React Query</li>
+                    <li>Axios</li>
+                    <li>TMDB API</li>
+                  </ul>
 
+                  <div class="project-card__actions">
                     <a
-                      href="https://github.com/"
+                      class="project-card__button project-card__button--primary"
+                      href="https://04-react-query-mu-ashy.vercel.app/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      class="project-card__btn"
-                      aria-label="Visit Energy Flow webservice on GitHub"
                     >
-                      VISIT
-                      <img
-                        src="./images/projects/projects-arrow.png"
-                        alt=""
-                        class="project-card__icon"
-                        width="16"
-                        height="16"
-                      />
+                      Live demo
+                      <span aria-hidden="true">↗</span>
+                    </a>
+
+                    <a
+                      class="project-card__button project-card__button--secondary"
+                      href="https://github.com/Serhii-Taran-dev/movie-search"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Repository
+                      <span aria-hidden="true">↗</span>
                     </a>
                   </div>
                 </div>
               </article>
             </li>
+
             <li class="projects__item">
               <article class="project-card">
-                <img
-                  src="./images/projects/english-img.jpg"
-                  srcset="
-                    ./images/projects/english-img.jpg    1x,
-                    ./images/projects/english-img@2x.jpg 2x
-                  "
-                  width="828"
-                  height="480"
-                  alt="English excellence"
-                  class="project-card__img"
-                  loading="lazy"
-                />
+                <a
+                  class="project-card__media"
+                  href="https://serhii-taran-dev.github.io/yacht-jet-landing/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Open the YachtJet live demo"
+                >
+                  <img
+                    class="project-card__image"
+                    src="./images/projects/yachtjet-project.webp"
+                    width="1440"
+                    height="900"
+                    alt="YachtJet luxury yacht rental landing page"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </a>
 
                 <div class="project-card__content">
-                  <p class="project-card__stack">
-                    React, JavaScript, Node JS, Git
+                  <div class="project-card__meta">
+                    <p class="project-card__number">03</p>
+                    <p class="project-card__type">Interactive landing page</p>
+                  </div>
+
+                  <h3 class="project-card__title">YachtJet</h3>
+
+                  <p class="project-card__description">
+                    A premium responsive landing page for a luxury yacht rental
+                    service with interactive carousels and accessible
+                    navigation.
                   </p>
 
-                  <div class="project-card__title-btn-wrapper">
-                    <h3 class="project-card__title">
-                      English excellence webservice
-                    </h3>
+                  <ul
+                    class="project-card__tech-list"
+                    aria-label="Technologies used"
+                  >
+                    <li>HTML5</li>
+                    <li>CSS3</li>
+                    <li>JavaScript</li>
+                    <li>Responsive UI</li>
+                  </ul>
 
+                  <div class="project-card__actions">
                     <a
-                      href="https://github.com/"
+                      class="project-card__button project-card__button--primary"
+                      href="https://serhii-taran-dev.github.io/yacht-jet-landing/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      class="project-card__btn"
-                      aria-label="Visit English excellence webservice on GitHub"
                     >
-                      VISIT
-                      <img
-                        src="./images/projects/projects-arrow.png"
-                        alt=""
-                        class="project-card__icon"
-                        width="16"
-                        height="16"
-                      />
+                      Live demo
+                      <span aria-hidden="true">↗</span>
+                    </a>
+
+                    <a
+                      class="project-card__button project-card__button--secondary"
+                      href="https://github.com/Serhii-Taran-dev/yacht-jet-landing"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Repository
+                      <span aria-hidden="true">↗</span>
                     </a>
                   </div>
                 </div>
               </article>
             </li>
+
             <li class="projects__item">
               <article class="project-card">
-                <img
-                  src="./images/projects/fruitbox-img.jpg"
-                  srcset="
-                    ./images/projects/fruitbox-img.jpg    1x,
-                    ./images/projects/fruitbox-img@2x.jpg 2x
-                  "
-                  width="828"
-                  height="480"
-                  alt="Fruitbox store"
-                  class="project-card__img"
-                  loading="lazy"
-                />
+                <a
+                  class="project-card__media"
+                  href="https://serhii-taran-dev.github.io/image-search-app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Open the Image Search live demo"
+                >
+                  <img
+                    class="project-card__image"
+                    src="./images/projects/image-search-project.webp"
+                    width="1440"
+                    height="900"
+                    alt="Image Search application displaying image search results"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </a>
 
                 <div class="project-card__content">
-                  <p class="project-card__stack">
-                    React, JavaScript, Node JS, Git
-                  </p>
-
-                  <div class="project-card__title-btn-wrapper">
-                    <h3 class="project-card__title">Fruitbox online store</h3>
-
-                    <a
-                      href="https://github.com/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      class="project-card__btn"
-                      aria-label="Visit Fruitbox online store on GitHub"
-                    >
-                      VISIT
-                      <img
-                        src="./images/projects/projects-arrow.png"
-                        alt=""
-                        class="project-card__icon"
-                        width="16"
-                        height="16"
-                      />
-                    </a>
+                  <div class="project-card__meta">
+                    <p class="project-card__number">04</p>
+                    <p class="project-card__type">JavaScript application</p>
                   </div>
-                </div>
-              </article>
-            </li>
-            <li class="projects__item projects__item--hidden">
-              <article class="project-card">
-                <img
-                  src="./images/projects/green-img.jpg"
-                  srcset="
-                    ./images/projects/green-img.jpg    1x,
-                    ./images/projects/green-img@2x.jpg 2x
-                  "
-                  width="828"
-                  height="480"
-                  alt="Green harvest store"
-                  class="project-card__img"
-                  loading="lazy"
-                />
 
-                <div class="project-card__content">
-                  <p class="project-card__stack">
-                    React, JavaScript, Node JS, Git
+                  <h3 class="project-card__title">Image Search</h3>
+
+                  <p class="project-card__description">
+                    A responsive image search application with pagination and
+                    full-size image previews powered by the Pixabay API.
                   </p>
 
-                  <div class="project-card__title-btn-wrapper">
-                    <h3 class="project-card__title">
-                      Green harvest online store
-                    </h3>
+                  <ul
+                    class="project-card__tech-list"
+                    aria-label="Technologies used"
+                  >
+                    <li>JavaScript</li>
+                    <li>HTML5</li>
+                    <li>CSS3</li>
+                    <li>Vite</li>
+                    <li>Axios</li>
+                    <li>Pixabay API</li>
+                    <li>SimpleLightbox</li>
+                    <li>iziToast</li>
+                  </ul>
 
+                  <div class="project-card__actions">
                     <a
-                      href="https://github.com/"
+                      class="project-card__button project-card__button--primary"
+                      href="https://serhii-taran-dev.github.io/image-search-app/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      class="project-card__btn"
-                      aria-label="Visit Green harvest online store on GitHub"
                     >
-                      VISIT
-                      <img
-                        src="./images/projects/projects-arrow.png"
-                        alt=""
-                        class="project-card__icon"
-                        width="16"
-                        height="16"
-                      />
+                      Live demo
+                      <span aria-hidden="true">↗</span>
                     </a>
-                  </div>
-                </div>
-              </article>
-            </li>
-            <li class="projects__item projects__item--hidden">
-              <article class="project-card">
-                <img
-                  src="./images/projects/jewelry-img.jpg"
-                  srcset="
-                    ./images/projects/jewelry-img.jpg    1x,
-                    ./images/projects/jewelry-img@2x.jpg 2x
-                  "
-                  width="828"
-                  height="480"
-                  alt="Chego jewelry website"
-                  class="project-card__img"
-                  loading="lazy"
-                />
-
-                <div class="project-card__content">
-                  <p class="project-card__stack">
-                    React, JavaScript, Node JS, Git
-                  </p>
-
-                  <div class="project-card__title-btn-wrapper">
-                    <h3 class="project-card__title">Chego jewelry website</h3>
 
                     <a
-                      href="https://github.com/"
+                      class="project-card__button project-card__button--secondary"
+                      href="https://github.com/Serhii-Taran-dev/image-search-app"
                       target="_blank"
                       rel="noopener noreferrer"
-                      class="project-card__btn"
-                      aria-label="Visit Chego jewelry website on GitHub"
                     >
-                      VISIT
-                      <img
-                        src="./images/projects/projects-arrow.png"
-                        alt=""
-                        class="project-card__icon"
-                        width="16"
-                        height="16"
-                      />
-                    </a>
-                  </div>
-                </div>
-              </article>
-            </li>
-            <li class="projects__item projects__item--hidden">
-              <article class="project-card">
-                <img
-                  src="./images/projects/mimino-img.jpg"
-                  srcset="
-                    ./images/projects/mimino-img.jpg    1x,
-                    ./images/projects/mimino-img@2x.jpg 2x
-                  "
-                  width="828"
-                  height="480"
-                  alt="Mimino website"
-                  class="project-card__img"
-                  loading="lazy"
-                />
-
-                <div class="project-card__content">
-                  <p class="project-card__stack">
-                    React, JavaScript, Node JS, Git
-                  </p>
-
-                  <div class="project-card__title-btn-wrapper">
-                    <h3 class="project-card__title">Mimino website</h3>
-
-                    <a
-                      href="https://github.com/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      class="project-card__btn"
-                      aria-label="Visit Mimino website on GitHub"
-                    >
-                      VISIT
-                      <img
-                        src="./images/projects/projects-arrow.png"
-                        alt=""
-                        class="project-card__icon"
-                        width="16"
-                        height="16"
-                      />
-                    </a>
-                  </div>
-                </div>
-              </article>
-            </li>
-            <li class="projects__item projects__item--hidden">
-              <article class="project-card">
-                <img
-                  src="./images/projects/power-img.jpg"
-                  srcset="
-                    ./images/projects/power-img.jpg    1x,
-                    ./images/projects/power-img@2x.jpg 2x
-                  "
-                  width="828"
-                  height="480"
-                  alt="Power pulse webservice"
-                  class="project-card__img"
-                  loading="lazy"
-                />
-
-                <div class="project-card__content">
-                  <p class="project-card__stack">
-                    React, JavaScript, Node JS, Git
-                  </p>
-
-                  <div class="project-card__title-btn-wrapper">
-                    <h3 class="project-card__title">Power pulse webservice</h3>
-
-                    <a
-                      href="https://github.com/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      class="project-card__btn"
-                      aria-label="Visit Power pulse webservice on GitHub"
-                    >
-                      VISIT
-                      <img
-                        src="./images/projects/projects-arrow.png"
-                        alt=""
-                        class="project-card__icon"
-                        width="16"
-                        height="16"
-                      />
-                    </a>
-                  </div>
-                </div>
-              </article>
-            </li>
-            <li class="projects__item projects__item--hidden">
-              <article class="project-card">
-                <img
-                  src="./images/projects/starlight-img.jpg"
-                  srcset="
-                    ./images/projects/starlight-img.jpg    1x,
-                    ./images/projects/starlight-img@2x.jpg 2x
-                  "
-                  width="828"
-                  height="480"
-                  alt="Starlight landing page"
-                  class="project-card__img"
-                  loading="lazy"
-                />
-
-                <div class="project-card__content">
-                  <p class="project-card__stack">
-                    React, JavaScript, Node JS, Git
-                  </p>
-
-                  <div class="project-card__title-btn-wrapper">
-                    <h3 class="project-card__title">
-                      starlight studio landing page
-                    </h3>
-
-                    <a
-                      href="https://github.com/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      class="project-card__btn"
-                      aria-label="Visit Starlight studio landing page on GitHub"
-                    >
-                      VISIT
-                      <img
-                        src="./images/projects/projects-arrow.png"
-                        alt=""
-                        class="project-card__icon"
-                        width="16"
-                        height="16"
-                      />
-                    </a>
-                  </div>
-                </div>
-              </article>
-            </li>
-            <li class="projects__item projects__item--hidden">
-              <article class="project-card">
-                <img
-                  src="./images/projects/vyshyvanka-img.jpg"
-                  srcset="
-                    ./images/projects/vyshyvanka-img.jpg    1x,
-                    ./images/projects/vyshyvanka-img@2x.jpg 2x
-                  "
-                  width="828"
-                  height="480"
-                  alt="Vyshyvanka Landing Page"
-                  class="project-card__img"
-                  loading="lazy"
-                />
-
-                <div class="project-card__content">
-                  <p class="project-card__stack">
-                    React, JavaScript, Node JS, Git
-                  </p>
-
-                  <div class="project-card__title-btn-wrapper">
-                    <h3 class="project-card__title">
-                      vyshyvanka vibes Landing Page
-                    </h3>
-
-                    <a
-                      href="https://github.com/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      class="project-card__btn"
-                      aria-label="Visit Vyshyvanka vibes Landing Page on GitHub"
-                    >
-                      VISIT
-                      <img
-                        src="./images/projects/projects-arrow.png"
-                        alt=""
-                        class="project-card__icon"
-                        width="16"
-                        height="16"
-                      />
-                    </a>
-                  </div>
-                </div>
-              </article>
-            </li>
-            <li class="projects__item projects__item--hidden">
-              <article class="project-card">
-                <img
-                  src="./images/projects/wallet-img.jpg"
-                  srcset="
-                    ./images/projects/wallet-img.jpg    1x,
-                    ./images/projects/wallet-img@2x.jpg 2x
-                  "
-                  width="828"
-                  height="480"
-                  alt="Wallet webservice"
-                  class="project-card__img"
-                  loading="lazy"
-                />
-
-                <div class="project-card__content">
-                  <p class="project-card__stack">
-                    React, JavaScript, Node JS, Git
-                  </p>
-
-                  <div class="project-card__title-btn-wrapper">
-                    <h3 class="project-card__title">wallet webservice</h3>
-
-                    <a
-                      href="https://github.com/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      class="project-card__btn"
-                      aria-label="Visit Wallet webservice on GitHub"
-                    >
-                      VISIT
-                      <img
-                        src="./images/projects/projects-arrow.png"
-                        alt=""
-                        class="project-card__icon"
-                        width="16"
-                        height="16"
-                      />
+                      Repository
+                      <span aria-hidden="true">↗</span>
                     </a>
                   </div>
                 </div>
@@ -867,7 +722,12 @@
             </li>
           </ul>
 
-          <button class="projects__load-more-btn" type="button">
+          <button
+            class="projects__load-more-btn"
+            type="button"
+            aria-controls="projects-list"
+            hidden
+          >
             <span>Load more</span>
           </button>
         </div>
