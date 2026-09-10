@@ -132,7 +132,7 @@
     </nav>
 
     <main>
-      <section class="hero section" aria-labelledby="hero-title">
+      <section class="hero section" aria-labelledby="hero-title" id="hero">
         <div class="hero__container container">
           <div class="hero__content">
             <p class="hero__eyebrow">
@@ -1205,55 +1205,79 @@
 
     <footer class="footer">
       <div class="footer__container container">
-        <div class="footer__top">
-          <a href="/" class="footer__logo">
-            SERGII<span class="footer__logo-accent">TARAN.</span>
-          </a>
+        <div class="footer__main">
+          <div class="footer__brand">
+            <a
+              class="footer__logo"
+              href="#hero"
+              aria-label="Serhii Taran — back to the top"
+            >
+              Serhii <span class="footer__logo-accent">Taran</span>
+            </a>
 
-          <ul class="footer__socials" aria-label="Social media links">
-            <li>
-              <a
-                href="https://www.instagram.com/goitclub/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Instagram"
-                >Instagram</a
-              >
-            </li>
-            <li>
-              <a
-                href="https://www.facebook.com/goITclub/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Facebook"
-                >Facebook</a
-              >
-            </li>
-            <li>
-              <a
-                href="https://ua.linkedin.com/school/goit-start-your-career/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Linkedin"
-                >Linkedin</a
-              >
-            </li>
-            <li>
-              <a
-                href="https://sergii-taran.github.io/my-portfolio-template/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="GitHub"
-                >GitHub</a
-              >
-            </li>
-          </ul>
+            <p class="footer__description">
+              Full-Stack Developer building modern web solutions with thoughtful
+              design, reliable code and AI-assisted workflows.
+            </p>
+          </div>
+
+          <div class="footer__links-wrapper">
+            <nav class="footer__navigation" aria-label="Footer navigation">
+              <p class="footer__links-title">Navigation</p>
+
+              <ul class="footer__navigation-list">
+                <li>
+                  <a class="footer__link" href="#about">About me</a>
+                </li>
+
+                <li>
+                  <a class="footer__link" href="#projects">Projects</a>
+                </li>
+
+                <li>
+                  <a class="footer__link" href="#contact">Contact</a>
+                </li>
+              </ul>
+            </nav>
+
+            <div class="footer__contacts">
+              <p class="footer__links-title">Connect</p>
+
+              <ul class="footer__contact-list">
+                <li>
+                  <a
+                    class="footer__link"
+                    href="https://github.com/Serhii-Taran-dev"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="GitHub profile — opens in a new tab"
+                  >
+                    GitHub
+                    <span aria-hidden="true">↗</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a class="footer__link" href="#contact-form">
+                    Send a message
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
 
-        <p class="footer__copy">
-          © Copyright 2025.<br />
-          Made by SergiiTaran
-        </p>
+        <div class="footer__bottom">
+          <p class="footer__copyright">
+            © <span id="footer-year">2026</span> Serhii Taran. All rights
+            reserved.
+          </p>
+
+          <a class="footer__back-to-top" href="#hero">
+            Back to top
+            <span aria-hidden="true">↑</span>
+          </a>
+        </div>
       </div>
     </footer>
 

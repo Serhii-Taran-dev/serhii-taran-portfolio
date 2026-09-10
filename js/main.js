@@ -1,4 +1,5 @@
 import { initContactForm } from "./modules/contact.js";
+import { initFooterYear } from "./modules/footer.js";
 import { initMenu } from "./modules/menu.js";
 import { initProjects } from "./modules/projects.js";
 import { initReviews } from "./modules/reviews.js";
@@ -9,3 +10,4 @@ initMenu();
 initProjects();
 initReviews();
 initContactForm();
+initFooterYear();
