@@ -148,9 +148,35 @@ select:focus-visible {
   color: var(--color-text-muted);
 }
 
+.about,
+.projects,
+.benefits,
+.faq,
+.reviews {
+  padding-block: 64px;
+}
+
 @media screen and (min-width: 768px) {
   .container {
     padding-inline: var(--container-padding-tablet);
+  }
+
+  .about,
+  .projects,
+  .benefits,
+  .faq,
+  .reviews {
+    padding-block: 88px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .about,
+  .projects,
+  .benefits,
+  .faq,
+  .reviews {
+    padding-block: 112px;
   }
 }
 
@@ -1064,7 +1090,6 @@ body.dark-theme .hero__visual-glow {
 .about {
   position: relative;
   isolation: isolate;
-  padding-block: 80px;
   overflow: hidden;
 }
 
@@ -1333,10 +1358,6 @@ body.dark-theme .hero__visual-glow {
 /* Tablet */
 
 @media screen and (min-width: 768px) {
-  .about {
-    padding-block: 112px;
-  }
-
   .about__heading {
     margin-bottom: 64px;
   }
@@ -1413,10 +1434,6 @@ body.dark-theme .hero__visual-glow {
 /* Desktop */
 
 @media screen and (min-width: 1280px) {
-  .about {
-    padding-block: 144px;
-  }
-
   .about__heading {
     margin-bottom: 72px;
   }
@@ -1663,7 +1680,6 @@ body.dark-theme .hero__visual-glow {
   position: relative;
   isolation: isolate;
   overflow: hidden;
-  padding-block: 80px;
 }
 
 .projects::before {
@@ -1985,10 +2001,6 @@ body.dark-theme .hero__visual-glow {
 /* Tablet */
 
 @media screen and (min-width: 768px) {
-  .projects {
-    padding-block: 112px;
-  }
-
   .projects__heading {
     margin-bottom: 64px;
   }
@@ -2037,10 +2049,6 @@ body.dark-theme .hero__visual-glow {
 /* Desktop */
 
 @media screen and (min-width: 1280px) {
-  .projects {
-    padding-block: 144px;
-  }
-
   .projects__heading {
     margin-bottom: 80px;
   }
@@ -2134,7 +2142,6 @@ body.dark-theme .hero__visual-glow {
   position: relative;
   isolation: isolate;
   overflow: hidden;
-  padding-block: 80px;
 }
 
 .benefits::before {
@@ -2296,10 +2303,6 @@ body.dark-theme .hero__visual-glow {
 /* Tablet */
 
 @media screen and (min-width: 768px) {
-  .benefits {
-    padding-block: 112px;
-  }
-
   .benefits__container {
     gap: 64px;
   }
@@ -2343,10 +2346,6 @@ body.dark-theme .hero__visual-glow {
 /* Desktop */
 
 @media screen and (min-width: 1280px) {
-  .benefits {
-    padding-block: 144px;
-  }
-
   .benefits::before {
     --glow-size: 720px;
 
@@ -2400,7 +2399,6 @@ body.dark-theme .hero__visual-glow {
   position: relative;
   isolation: isolate;
   overflow: hidden;
-  padding-block: 80px;
 }
 
 .faq::before {
@@ -2611,10 +2609,6 @@ body.dark-theme .hero__visual-glow {
 /* Tablet */
 
 @media screen and (min-width: 768px) {
-  .faq {
-    padding-block: 112px;
-  }
-
   .faq__container {
     gap: 64px;
   }
@@ -2653,10 +2647,6 @@ body.dark-theme .hero__visual-glow {
 /* Desktop */
 
 @media screen and (min-width: 1280px) {
-  .faq {
-    padding-block: 144px;
-  }
-
   .faq::before {
     --glow-size: 720px;
 
@@ -2712,15 +2702,10 @@ body.dark-theme .hero__visual-glow {
    Reviews
 ================================= */
 
-/* ==============================
-   Reviews
-================================= */
-
 .reviews {
   position: relative;
   isolation: isolate;
   overflow: hidden;
-  padding-block: 80px;
 }
 
 .reviews[hidden] {
@@ -2976,10 +2961,6 @@ body.dark-theme .hero__visual-glow {
 /* Tablet */
 
 @media screen and (min-width: 768px) {
-  .reviews {
-    padding-block: 112px;
-  }
-
   .reviews__heading {
     margin-bottom: 64px;
   }
@@ -3024,10 +3005,6 @@ body.dark-theme .hero__visual-glow {
 /* Desktop */
 
 @media screen and (min-width: 1280px) {
-  .reviews {
-    padding-block: 144px;
-  }
-
   .reviews::before {
     --glow-size: 720px;
 
