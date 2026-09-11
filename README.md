@@ -47,14 +47,14 @@ The project is built with semantic HTML, modern CSS and modular JavaScript witho
 
 ## Tech Stack
 
-| Category | Technologies |
-| --- | --- |
-| Markup | HTML5 |
-| Styling | CSS3, responsive layout, custom properties |
-| Logic | JavaScript, ES modules, Fetch API |
-| UI library | Swiper |
-| Form delivery | Formspree |
-| Tooling | Vite, npm, Git, GitHub |
+| Category      | Technologies                               |
+| ------------- | ------------------------------------------ |
+| Markup        | HTML5                                      |
+| Styling       | CSS3, responsive layout, custom properties |
+| Logic         | JavaScript, ES modules, Fetch API          |
+| UI library    | Swiper                                     |
+| Form delivery | Formspree                                  |
+| Tooling       | Vite, npm, Git, GitHub                     |
 
 ## Getting Started
 
@@ -107,7 +107,3 @@ The main layout, responsive design and interactive functionality are complete. B
 
 - GitHub: [Serhii-Taran-dev](https://github.com/Serhii-Taran-dev)
 - Email: [serg.taran1970@gmail.com](mailto:serg.taran1970@gmail.com)
-
-## License
-
-This project is available under the terms of the [MIT License](LICENSE).
