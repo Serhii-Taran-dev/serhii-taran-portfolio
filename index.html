@@ -158,10 +158,7 @@
                   View my work
                 </a>
 
-                <a
-                  class="hero__button hero__button--secondary"
-                  href="#contacts"
-                >
+                <a class="hero__button hero__button--secondary" href="#contact">
                   Let’s work together
                 </a>
               </div>
@@ -185,10 +182,22 @@
             </div>
           </div>
 
-          <div class="hero__visual" aria-hidden="true">
-            <div class="hero__visual-glow"></div>
+          <div class="hero__visual">
+            <div class="hero__visual-glow" aria-hidden="true"></div>
 
-            <div class="hero__code-card">
+            <div class="hero__photo">
+              <img
+                class="hero__image"
+                src="/images/hero/serhii-taran-hero.webp"
+                alt="Serhii Taran, Full-Stack Developer"
+                width="960"
+                height="1200"
+                fetchpriority="high"
+                decoding="async"
+              />
+            </div>
+
+            <div class="hero__code-card" aria-hidden="true">
               <div class="hero__code-header">
                 <span></span>
                 <span></span>
@@ -245,17 +254,27 @@
           </div>
 
           <div class="about__layout">
-            <div class="about__visual" aria-hidden="true">
-              <div class="about__portrait-card">
-                <span class="about__initials">ST</span>
+            <div class="about__visual">
+              <figure class="about__photo-card">
+                <img
+                  class="about__image"
+                  src="/images/about/serhii-taran-about-portrait.webp"
+                  alt="Serhii Taran working on a laptop"
+                  width="960"
+                  height="1200"
+                  loading="lazy"
+                  decoding="async"
+                />
 
-                <p class="about__visual-text">
-                  Structured thinking.
-                  <span>Practical solutions.</span>
-                </p>
+                <figcaption class="about__photo-caption">
+                  <p class="about__visual-text">
+                    Structured thinking.
+                    <span>Practical solutions.</span>
+                  </p>
 
-                <span class="about__visual-label">Serhii Taran</span>
-              </div>
+                  <span class="about__visual-label">Serhii Taran</span>
+                </figcaption>
+              </figure>
             </div>
 
             <div class="about__content">
@@ -313,7 +332,7 @@
               </div>
 
               <div class="about__focus">
-                <p class="about__focus-label">Current focus</p>
+                <h3 class="about__focus-label">Current focus</h3>
 
                 <ul class="about__focus-list">
                   <li>Frontend development</li>
