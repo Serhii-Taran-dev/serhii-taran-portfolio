@@ -4,13 +4,16 @@ export function initMenu() {
   const burgerBtn = document.getElementById("burger-btn");
   const mobileMenu = document.getElementById("mobile-menu");
   const closeBtn = document.getElementById("menu-close-btn");
-  const navLinks = mobileMenu?.querySelectorAll(".mobile-menu__link");
+  const navLinks = mobileMenu?.querySelectorAll(
+    ".mobile-menu__link, .mobile-menu__logo",
+  );
 
   if (
     !(burgerBtn instanceof HTMLButtonElement) ||
     !(mobileMenu instanceof HTMLElement) ||
     !(closeBtn instanceof HTMLButtonElement) ||
-    !navLinks
+    !navLinks ||
+    navLinks.length === 0
   ) {
     return;
   }

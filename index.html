@@ -3,8 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="My portfolio template projects" />
-    <title>My porftfolio template</title>
+    <meta
+      name="description"
+      content="Serhii Taran is a Full-Stack Developer building responsive, accessible web applications with React, Next.js, Node.js and AI-assisted workflows."
+    />
+    <meta name="author" content="Serhii Taran" />
+    <meta name="robots" content="index, follow" />
+
+    <title>Serhii Taran | Full-Stack Developer</title>
 
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32" />
@@ -24,9 +30,11 @@
   </head>
 
   <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
     <header class="header">
       <div class="header__container container">
-        <a class="header__logo" href="./" aria-label="Serhii Taran — Home">
+        <a class="header__logo" href="#hero" aria-label="Serhii Taran — Home">
           Serhii <span class="header__logo-accent">Taran</span>
         </a>
 
@@ -94,7 +102,11 @@
       inert
     >
       <div class="mobile-menu__top">
-        <a class="mobile-menu__logo" href="./" aria-label="Serhii Taran — Home">
+        <a
+          class="mobile-menu__logo"
+          href="#hero"
+          aria-label="Serhii Taran — Home"
+        >
           Serhii <span class="mobile-menu__logo-accent">Taran</span>
         </a>
 
@@ -123,7 +135,7 @@
           <a class="mobile-menu__link" href="#projects">Projects</a>
         </li>
         <li>
-          <a class="mobile-menu__link" href="#contacts">Contact</a>
+          <a class="mobile-menu__link" href="#contact">Contact</a>
         </li>
       </ul>
 
@@ -133,7 +145,7 @@
       </p>
     </nav>
 
-    <main>
+    <main id="main-content" tabindex="-1">
       <section class="hero section" aria-labelledby="hero-title" id="hero">
         <div class="hero__container container">
           <div class="hero__content">

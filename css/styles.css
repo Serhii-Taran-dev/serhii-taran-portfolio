@@ -116,6 +116,31 @@ select:focus-visible {
   clip-path: inset(100%);
 }
 
+.skip-link {
+  position: fixed;
+  z-index: 9999;
+  top: 16px;
+  left: 16px;
+  padding: 12px 18px;
+  border: 2px solid var(--color-white);
+  border-radius: var(--radius-pill);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--color-white);
+  background-color: var(--color-accent);
+  box-shadow: 0 8px 24px rgb(11 31 51 / 24%);
+  transform: translateY(calc(-100% - 32px));
+  transition: transform var(--transition-fast);
+}
+
+.skip-link:focus,
+.skip-link:focus-visible {
+  outline: 2px solid var(--color-text);
+  outline-offset: 4px;
+  transform: translateY(0);
+}
+
 /* ==============================
    Common layout
 ================================= */
