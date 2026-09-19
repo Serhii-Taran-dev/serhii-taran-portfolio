@@ -1,8 +1,3 @@
-import Swiper from "swiper";
-import { A11y, Keyboard, Navigation } from "swiper/modules";
-
-import "swiper/css";
-
 const REVIEWS_URL = new URL("reviews.json", document.baseURI);
 
 const REVIEW_LIMITS = {
@@ -120,7 +115,19 @@ function updateControlsVisibility(swiper, controls) {
   controls.hidden = swiper.isLocked;
 }
 
-function createReviewsSlider({ slider, previousButton, nextButton, controls }) {
+async function createReviewsSlider({
+  slider,
+  previousButton,
+  nextButton,
+  controls,
+}) {
+  const [{ default: Swiper }, { A11y, Keyboard, Navigation }] =
+    await Promise.all([
+      import("swiper"),
+      import("swiper/modules"),
+      import("swiper/css"),
+    ]);
+
   return new Swiper(slider, {
     modules: [A11y, Keyboard, Navigation],
 
@@ -232,7 +239,7 @@ export async function initReviews() {
 
     section.hidden = false;
 
-    createReviewsSlider({
+    await createReviewsSlider({
       slider,
       previousButton,
       nextButton,

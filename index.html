@@ -19,13 +19,6 @@
 
     <link rel="stylesheet" href="./css/reset.css" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
-      rel="stylesheet"
-    />
-
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
 
@@ -201,6 +194,12 @@
               <img
                 class="hero__image"
                 src="/images/hero/serhii-taran-hero.webp"
+                srcset="
+                  /images/hero/serhii-taran-hero-480.webp 480w,
+                  /images/hero/serhii-taran-hero-768.webp 768w,
+                  /images/hero/serhii-taran-hero.webp     960w
+                "
+                sizes="(min-width: 1280px) 480px, (min-width: 768px) 520px, min(440px, calc(100vw - 56px))"
                 alt="Serhii Taran, Full-Stack Developer"
                 width="960"
                 height="1200"
@@ -271,6 +270,12 @@
                 <img
                   class="about__image"
                   src="/images/about/serhii-taran-about-portrait.webp"
+                  srcset="
+                    /images/about/serhii-taran-about-portrait-480.webp 480w,
+                    /images/about/serhii-taran-about-portrait-768.webp 768w,
+                    /images/about/serhii-taran-about-portrait.webp     960w
+                  "
+                  sizes="(min-width: 1280px) 440px, (min-width: 768px) 680px, calc(100vw - 40px)"
                   alt="Serhii Taran working on a laptop"
                   width="960"
                   height="1200"
