@@ -1,7 +1,23 @@
 const THEME_STORAGE_KEY = "portfolio-theme";
 
+function getSavedTheme() {
+  try {
+    return localStorage.getItem(THEME_STORAGE_KEY);
+  } catch {
+    return null;
+  }
+}
+
+function saveTheme(theme) {
+  try {
+    localStorage.setItem(THEME_STORAGE_KEY, theme);
+  } catch {
+    // The selected theme remains active for the current page session.
+  }
+}
+
 function getInitialTheme() {
-  const savedTheme = localStorage.getItem(THEME_STORAGE_KEY);
+  const savedTheme = getSavedTheme();
 
   if (savedTheme === "light" || savedTheme === "dark") {
     return savedTheme;
@@ -36,6 +52,6 @@ export function initTheme() {
     const theme = themeToggle.checked ? "dark" : "light";
 
     applyTheme(theme, themeToggle);
-    localStorage.setItem(THEME_STORAGE_KEY, theme);
+    saveTheme(theme);
   });
 }

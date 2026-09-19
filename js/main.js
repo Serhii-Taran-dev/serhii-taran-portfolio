@@ -8,6 +8,6 @@ import { initTheme } from "./modules/theme.js";
 initTheme();
 initMenu();
 initProjects();
-initReviews();
+void initReviews();
 initContactForm();
 initFooterYear();

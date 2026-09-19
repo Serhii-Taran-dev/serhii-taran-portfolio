@@ -130,6 +130,7 @@ export function initContactForm() {
   const statusElement = form.querySelector(".contact__status");
 
   if (
+    fields.length === 0 ||
     !(submitButton instanceof HTMLButtonElement) ||
     !(submitText instanceof HTMLElement) ||
     !(statusElement instanceof HTMLParagraphElement)
@@ -154,6 +155,9 @@ export function initContactForm() {
 
   form.addEventListener("submit", async (event) => {
     event.preventDefault();
+
+    if (form.getAttribute("aria-busy") === "true") return;
+
     clearFormStatus(statusElement);
 
     fields.forEach((field) => {
