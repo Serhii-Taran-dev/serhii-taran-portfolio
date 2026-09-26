@@ -169,4 +169,4 @@ Responsive behavior, accessibility, performance, SEO, browser functionality and 
 **Serhii Taran** — Full-Stack Developer
 
 - GitHub: [Serhii-Taran-dev](https://github.com/Serhii-Taran-dev)
-- Email: [serg.taran1970@gmail.com](mailto:serg.taran1970@gmail.com)
+- Email: [serhii.taran.dev@gmail.com](mailto:serhii.taran.dev@gmail.com)
