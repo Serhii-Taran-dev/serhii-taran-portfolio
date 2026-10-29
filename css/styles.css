@@ -3314,9 +3314,15 @@ body.dark-theme .reviews::before {
 .contact__link {
   display: inline-flex;
   width: fit-content;
+  max-width: 100%;
   align-items: center;
   gap: 8px;
   transition: color var(--transition-fast);
+}
+
+.contact__link > span:first-child {
+  min-width: 0;
+  overflow-wrap: anywhere;
 }
 
 .contact__link:focus-visible {
@@ -3565,10 +3571,6 @@ body.dark-theme .reviews::before {
     column-gap: 32px;
   }
 
-  .contact__item:last-child {
-    grid-column: 1 / -1;
-  }
-
   .contact__form-wrapper {
     padding: 40px;
   }
@@ -3621,10 +3623,6 @@ body.dark-theme .reviews::before {
 
   .contact__list {
     grid-template-columns: minmax(0, 1fr);
-  }
-
-  .contact__item:last-child {
-    grid-column: auto;
   }
 
   .contact__form-wrapper {
